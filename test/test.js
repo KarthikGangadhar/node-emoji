@@ -20,6 +20,7 @@ _app.tests.unit['emojit2Unicode should return a unicode 1f525'] = async (done) =
     const response = emojit2Unicode("🔥");
     assert.strictEqual(typeof (response), 'string');
     assert.strictEqual(response, '1f525');
+    done();
 };
 
 // Assert that the emojit2Unicode function is returning a null value
@@ -27,6 +28,7 @@ _app.tests.unit['emojit2Unicode should return a null value'] = async (done) => {
     const response = emojit2Unicode(254);
     assert.strictEqual(typeof (response), 'object');
     assert.strictEqual(response, null);
+    done();
 };
 
 // Assert that the unicode2Emoji function is returning a emoji
@@ -34,6 +36,7 @@ _app.tests.unit['unicode2Emoji should return a emoji 🔥'] = async (done) => {
     const response = unicode2Emoji("1f525");
     assert.strictEqual(typeof (response), 'string');
     assert.strictEqual(response, '🔥');
+    done();
 };
 
 // Assert that the unicode2Emoji function is returning a null value
@@ -41,6 +44,7 @@ _app.tests.unit['unicode2Emoji should return a null value'] = async (done) => {
     const response = unicode2Emoji(254);
     assert.strictEqual(typeof (response), 'object');
     assert.strictEqual(response, null);
+    done();
 };
 
 // Count all the tests
